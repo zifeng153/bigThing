@@ -1,12 +1,108 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>大事件页面登录</title>
+    <!-- 导入layui的样式 -->
+    <link rel="stylesheet" href="./assets/lib/layui/css/layui.css" />
+    <!-- 导入自写样式 -->
+    <link rel="stylesheet" href="./assets/css/login4.css" />
 </head>
+
 <body>
-    
+    <!-- 放置左上角标志图片 -->
+    <div class='layui-main'>
+        <img src="./assets/images/logo.png" alt="" />
+    </div>
+    <!-- 设置主体框 -->
+    <div class='main-box'>
+        <!-- 设置上标题,背景图 -->
+        <div class="title-box"></div>
+        <!-- 设置登录的div  -->
+        <div class="login-box">
+            <!-- 设置登陆框 -->
+            <form class="layui-form" id="form-login">
+                <!-- 用户名 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-username"></i>
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名"
+                        autocomplete="off" class="layui-input">
+
+                </div>
+                <!-- 设置密码框 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>
+                    <input type="password" name="password" required lay-verify="required|pwd" placeholder="请输入密码"
+                        autocomplete="off" class="layui-input">
+                </div>
+
+                <!-- 设置登录按钮 -->
+                <div class="layui-form-item">
+                    <!-- 普通按钮和表单按钮的区别在于lay-submit属性 -->
+                    <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit>登录</button>
+
+                </div>
+                <div class="layui-form-item links">
+                    <a href="javascript:;" id="link-reg">去注册账号</a>
+
+                </div>
+
+            </form>
+
+        </div>
+        <!-- 设置注册的div  -->
+        <div class="reg-box">
+            <!-- 设置注册框 -->
+            <form class="layui-form" id="form-reg">
+                <!-- 用户名 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-username"></i>
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名"
+                        autocomplete="off" class="layui-input">
+
+                </div>
+                <!-- 设置密码框 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>
+                    <input type="password" name="password" required lay-verify="required|pwd" placeholder="请输入密码"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <!-- 再次确认密码框 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>
+                    <input type="password" name="repassword" required lay-verify="required|pwd|repwd" placeholder="请再次输入密码"
+                        autocomplete="off" class="layui-input">
+                </div>
+
+                <!-- 设置注册按钮 -->
+                <div class="layui-form-item">
+                    <!-- 普通按钮和表单按钮的区别在于lay-submit属性 -->
+                    <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit>注册</button>
+
+                </div>
+                <div class="layui-form-item links">
+                    <a href="javascript:;" id="link-login">去登录</a>
+
+                </div>
+
+            </form>
+            
+
+        </div>
+
+    </div>
+    <!-- 引入layui的js -->
+    <script src="./assets/lib/layui/layui.all.js" /></script>
+    <!-- 引入js -->
+    <script src="./assets/lib/jquery.js" /></script>
+    <!-- 引入baseAPI3.js -->
+    <!-- <script src="./assets/js/baseAPI4.js"></script> -->
+    <!-- 引入自己的js -->
+    <script src="./assets/js/login4.js" /></script>
 </body>
+
 </html>
