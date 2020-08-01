@@ -82,7 +82,7 @@ $('#form-login').submit(function(e) {
 
             localStorage.setItem('token',res.token)
 
-           location.href = '/index4.html'
+           location.href = '/code/index4.html'
         }
     })
 })
