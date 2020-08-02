@@ -52,14 +52,15 @@ function renderAvater(user) {
     // 设置欢迎文本
     let name = user.nickname || user.username
 
-    $('.welcome').html('欢迎&nbasp;&nbsp' + name)
+    $('.welcome').html('欢迎&nbsp;&nbsp' + name)
 
     // 渲染头像
     if (user.user_pic !== null) {
         // 图片头像
-        $('.layui-nav-img').atter('src', user.user_pic).show()
+        $('.layui-nav-img').
+        attr('src', user.user_pic).show()
         // 文本头像
-        $('.text-avatar').html().hide()
+        $('.text-avatar').hide()
 
     } else {
         $('.text-avatar').html(name[0].toUpperCase()).show()
